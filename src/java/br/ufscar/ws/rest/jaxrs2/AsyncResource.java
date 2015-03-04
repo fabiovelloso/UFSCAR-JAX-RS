@@ -44,14 +44,14 @@ public class AsyncResource {
             }
 
             private String veryExpensiveOperation() {
-/*
+
                 try {
                     //  Thread.currentThread().sleep(5000);
                     Thread.sleep(5000);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(AsyncResource.class.getName()).log(Level.SEVERE, null, ex);
                 }
-*/
+
                 return "<message>Processamento assincrono finalizado</message>";
             }
         }).start();

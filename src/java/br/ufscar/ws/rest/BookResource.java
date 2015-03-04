@@ -72,7 +72,6 @@ public class BookResource {
     @PUT
     public Response updateBook(Book book, @HeaderParam("Content-Type") String contentType) {
    
-        System.out.println("***** +>" + contentType);
         if (contentType.equals("application/json")) {
             return Response.status(200).entity(book).type(MediaType.APPLICATION_JSON).build();
         } else  {
@@ -82,9 +81,9 @@ public class BookResource {
 
     @DELETE
     @Path("/{id}")
-    public Response deleteBook(@PathParam("id") String id) {
-        allBooks.remove(id);
-        return null;
+    public String deleteBook(@PathParam("id") String id) {
+         // apenas exemplo 
+        return "Book "+ id + " removido";
     }
 
     public BookResource() {

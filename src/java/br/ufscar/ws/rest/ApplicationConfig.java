@@ -49,6 +49,8 @@ public class ApplicationConfig extends Application {
         resources.add(br.ufscar.ws.rest.filters.PoweredByResponseFilter.class);
         resources.add(br.ufscar.ws.rest.jaxrs2.AsyncGetWithTimeoutResource.class);
         resources.add(br.ufscar.ws.rest.jaxrs2.AsyncResource.class);
+        resources.add(br.ufscar.ws.rest.jaxrs2.GenericResource.class);
+        resources.add(br.ufscar.ws.rest.jaxrs2.RegexValidationResource.class);
         resources.add(br.ufscar.ws.rest.jaxrs2.TestFiltersResource.class);
         resources.add(br.ufscar.ws.rest.jaxrs2.ValidateResource.class);
     }
