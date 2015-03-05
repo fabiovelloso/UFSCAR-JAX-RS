@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.ufscar.entities;
+package br.ufscar.ws.rest;
 
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;

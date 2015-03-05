@@ -33,7 +33,6 @@ public class ApplicationConfig extends Application {
     }
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(br.ufscar.entities.TestExceptionResource.class);
         resources.add(br.ufscar.ws.rest.BookCacheResource.class);
         resources.add(br.ufscar.ws.rest.BookResource.class);
         resources.add(br.ufscar.ws.rest.DefaultValueResource.class);
@@ -46,6 +45,7 @@ public class ApplicationConfig extends Application {
         resources.add(br.ufscar.ws.rest.MatrixResource.class);
         resources.add(br.ufscar.ws.rest.NoticiasResource.class);
         resources.add(br.ufscar.ws.rest.RegexResource.class);
+        resources.add(br.ufscar.ws.rest.TestExceptionResource.class);
         resources.add(br.ufscar.ws.rest.filters.NamedPoweredByResponseFilter.class);
         resources.add(br.ufscar.ws.rest.filters.PoweredByResponseFilter.class);
         resources.add(br.ufscar.ws.rest.jaxrs2.AsyncGetWithTimeoutResource.class);
