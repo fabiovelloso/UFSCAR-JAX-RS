@@ -51,9 +51,7 @@ public class BookEtagResource {
      */
     public BookEtagResource() {
     }
-
-
-
+ 
     @GET
     @Path("{id}")
     @Produces(value = {MediaType.APPLICATION_ATOM_XML, MediaType.APPLICATION_JSON})
@@ -65,13 +63,12 @@ public class BookEtagResource {
         cacheControl.setNoStore(true);
         cacheControl.setMaxAge(60);
         Response.ResponseBuilder builder = request.evaluatePreconditions(etag);
-        if (builder != null) {
-            builder.cacheControl(cacheControl);
-        } else {
+        if (builder == null) {
             builder = Response.ok(book);
-            builder.cacheControl(cacheControl);
             builder.tag(etag);
         }
+        builder.cacheControl(cacheControl);
+
         return builder.build();
     }
 
