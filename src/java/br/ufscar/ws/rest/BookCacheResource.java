@@ -48,7 +48,7 @@ public class BookCacheResource {
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response getBook(@PathParam("id") int id) {
-        Book book = new Book().getById(1);
+        Book book = new Book().getById(id);
         CacheControl cacheControl = new CacheControl();
         cacheControl.setMaxAge(600);
         cacheControl.setPrivate(true);
