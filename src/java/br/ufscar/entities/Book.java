@@ -43,7 +43,7 @@ public class Book {
 
     }
 
-    public Book get(int i) {
+    public Book getById(int i) {
 
         switch (i) {
             case 1:
@@ -126,7 +126,7 @@ public class Book {
 
     public static void main(String[] args) {
         Book book = new Book();
-        book = book.get(2);
+        book = book.getById(2);
         System.out.println(book.getAuthor());
     }
 
