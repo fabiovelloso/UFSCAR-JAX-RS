@@ -40,7 +40,7 @@ import javax.ws.rs.core.Response;
 public class BookResource {
 
     Book book;
-    List allBooks;
+    List<Book> allBooks;
 
     @Produces(value = {MediaType.APPLICATION_ATOM_XML, MediaType.APPLICATION_JSON})
     @GET
@@ -53,7 +53,7 @@ public class BookResource {
     @Produces(value = {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response getBook(@PathParam("id") int id) throws ClassNotFoundException {
 
-        book = book.get(id);
+        book = book.getById(id);
         if (book == null) {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
@@ -88,9 +88,9 @@ public class BookResource {
 
     public BookResource() {
         book = new br.ufscar.entities.Book();
-        allBooks = new ArrayList();
-        allBooks.add(book.get(1)); 
-        allBooks.add(book.get(2));
+        allBooks = new ArrayList<>();
+        allBooks.add(book.getById(1)); 
+        allBooks.add(book.getById(2));
     }
 
     public void printBook(Book book) {
